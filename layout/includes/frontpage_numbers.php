@@ -25,6 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require(__DIR__ . '/config.php');
+
 global $DB;
 
 $templatecontext['numberusers'] = $DB->count_records('user', array('deleted' => 0, 'suspended' => 0)) - 1;
